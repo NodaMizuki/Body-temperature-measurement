@@ -11,7 +11,7 @@ export class TemperatureDataComponent implements OnInit {
 
   ngOnInit(): void {
     let submit = document.getElementById('submit');
-    let temperature = document.getElementById('temperature').value;
+    let temperature = document.getElementById('temperature').nodeValue;
     submit.addEventListener('click', function(){
     console.log('あなたの体温は${temperature}です');
     window.alert('あなたの体温は' + temperature + 'です');
