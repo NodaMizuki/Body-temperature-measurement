@@ -1,0 +1,11 @@
+body {
+    background: #f4f6f7;
+    font-family: sans-serif;
+  }
+  .input {
+    position: absolute;         
+    margin: 60px;
+    padding: 50px;
+    background: #c8eff1;
+    font-family: sans-serif;
+  }

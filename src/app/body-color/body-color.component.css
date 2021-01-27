@@ -1,0 +1,12 @@
+.color {
+    top: 400px;
+    margin: 50px;
+    padding: 50px;
+    position: absolute;        
+    font-family: sans-serif;
+    border: 1px solid black;
+  }
+
+.changeColor {
+   background-color: coral;
+}
