@@ -1,4 +1,8 @@
 <h1>{{title}}</h1>
-<app-temperature-data></app-temperature-data>
-<app-body-color></app-body-color>
-<app-data-graph></app-data-graph>
+<div class="row" fxLayout="row">
+        <div class="column" fxLayout="column" >
+            <div fxFlex="35%" style="background-color:palegreen;"><app-temperature-data></app-temperature-data></div>
+            <div fxFlex="65%" style="background-color: white;"><app-body-color></app-body-color></div>
+        </div>
+    <div fxFlex style="background-color:rgb(255, 255, 171);"><app-data-graph></app-data-graph></div>
+</div>

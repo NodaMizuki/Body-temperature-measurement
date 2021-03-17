@@ -1,12 +1,32 @@
-.color {
-    top: 400px;
-    margin: 50px;
+.colorChange {
     padding: 50px;
-    position: absolute;        
+    position: relative;        
     font-family: sans-serif;
-    border: 1px solid black;
   }
 
-.changeColor {
-   background-color: coral;
-}
+.default {
+    /* 配置の設定 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 1;
+  }
+
+.color1 {
+    /* 配置の設定 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+  }
+
+.color2 {
+    /* 配置の設定 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+  }

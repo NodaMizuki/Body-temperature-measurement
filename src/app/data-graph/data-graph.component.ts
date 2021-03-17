@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ChartDataSets, ChartOptions } from 'chart.js';
 import { Color, Label } from 'ng2-charts'
+import { TemperatureService } from '../temperature.service';
 
 @Component({
   selector: 'app-data-graph',
@@ -8,6 +9,8 @@ import { Color, Label } from 'ng2-charts'
   styleUrls: ['./data-graph.component.css']
 })
 export class DataGraphComponent  {
+
+  
 
   //data
     lineChartData: ChartDataSets[] = [
@@ -49,7 +52,16 @@ export class DataGraphComponent  {
     lineChartPlugins = [];
     lineChartType = 'line'; // グラフの種類
 
-    constructor() { } 
+    constructor(
+      private temperatureService: TemperatureService
+    ) { } 
+
+    ngOnInit() {
+      this.temperatureService.data$.subscribe(({date,temperature}) => {
+        console.log('体温は' + temperature + '度という情報が来たよ');
+      });
+    
+    }
 
   }
 

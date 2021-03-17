@@ -1,6 +1,9 @@
-/* Application-wide Styles */
-h1 {
-    color: #7e7d7a;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 250%;
-  }
+.row {
+  min-width: 80vh;
+  min-height: 80vh;
+}
+
+.column {
+  min-width: 80vh;
+  min-height: 80vh;
+}

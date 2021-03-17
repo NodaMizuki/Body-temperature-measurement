@@ -1,13 +1,16 @@
-   <div class="input">
-        <form>
-            <p>
+    <div class="Form">   
+        <form [formGroup]="myForm">
+            <div>
                 <label for="date">日付：</label>
-                <input type="date" id="date">
-            </p>
-            <p>
+                <input type="date" formControlName="date">
+            </div>
+            <span style="color: red; font-size: small;" *ngIf="date.errors?.required">※必須項目です※</span>
+            <div>
                 <label for="temperature">体温：</label>
-                <input type="text" id="temperature" value="36.5" >
-            </p>
-            <p><input type="submit" id="submit"  value="登録する"></p>
+                <input type="text" formControlName="temperature">
+            </div>
+            <span style="color: red; font-size: small;" *ngIf="temperature.errors?.required">※必須項目です※</span>
+            <div><button class="submit" [disabled]="myForm.invalid"
+                        (click)= "clickNext()">送信!</button></div>
         </form>
-    </div>
+    </div> 
